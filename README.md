@@ -14,7 +14,7 @@
 
 1. *Clone the repository*:
     ``` bash
-    git clone https://github.com/vishalyadav0987/PG-Finder.git
+    git clone https://github.com/AryanThadeshwar/mini_project.git
     cd cd PG-Finder
     ```
 
