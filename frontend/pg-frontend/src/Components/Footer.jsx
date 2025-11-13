@@ -13,7 +13,6 @@ const Footer = () => {
             </div>
 
             <div className="footer_center" >
-                <h3>Useful Links</h3>
                 <ul style={{color:"#c7c7c7"}}>
                     <li>About Us</li>
                     <li>Terms and Conditions</li>
@@ -25,15 +24,11 @@ const Footer = () => {
                 <h3>Contact</h3>
                 <div className="footer_right_info">
                     <MdLocalPhone />
-                    <p>+1 234 567 890</p>
+                    <p>+91 9510487561</p>
                 </div>
                 <div className="footer_right_info">
                     <MdEmail />
-                    <p>PGFinder@support.com</p>
-                </div>
-                <div className="footer_right_info">
-                <MdPayment/>
-                <p>Payement</p>
+                    <p>PGWale@support.com</p>
                 </div>
             </div>
         </div>

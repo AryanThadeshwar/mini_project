@@ -58,91 +58,91 @@ export const categories = [
   },
   {
     img: beach,
-    label: "Mumbai",
+    label: "Navrangpura",
     icon: <TbBeach />,
     description: "This property is close to the beach!",
   },
   {
     img: windmill,
-    label: "Tamil Nadu",
+    label: "Naranpura",
     icon: <GiWindmill />,
     description: "This property is has windmills!",
   },
   {
     img: iconiccity,
-    label: "Delhi",
+    label: "Paldi",
     icon: <MdOutlineVilla />,
     description: "This property is modern!",
   },
   {
     img: country,
-    label: "Himachal Pradesh",
+    label: "Bodakdev",
     icon: <TbMountain />,
     description: "This property is in the countryside!",
   },
   {
     img: lakes,
-    label: "Jamu & Kashmir",
+    label: "Thaltej",
     icon: <TbPool />,
     description: "This is property has a beautiful pool!",
   },
   {
     img: island,
-    label: "Port Blare",
+    label: "Maninagar",
     icon: <GiIsland />,
     description: "This property is on an island!",
   },
   {
     img: lakes,
-    label: "Lakefront",
+    label: "Narol",
     icon: <GiBoatFishing />,
     description: "This property is near a lake!",
   },
   {
     img: "assets/skiing_cat.jpg",
-    label: "Ski-in/out",
+    label: "Ranip",
     icon: <FaSkiing />,
     description: "This property has skiing activies!",
   },
   {
     img: "assets/castle_cat.webp",
-    label: "Castles",
+    label: "Gota",
     icon: <GiCastle />,
     description: "This property is an ancient castle!",
   },
   {
     img: "assets/cave_cat.jpg",
-    label: "Caves",
+    label: "S.G.Highway",
     icon: <GiCaveEntrance />,
     description: "This property is in a spooky cave!",
   },
   {
     img: "assets/camping_cat.jpg",
-    label: "Camping",
+    label: "Naroda",
     icon: <GiForestCamp />,
     description: "This property offers camping activities!",
   },
   {
     img: "assets/arctic_cat.webp",
-    label: "Arctic",
+    label: "Ratanpur",
     icon: <BsSnow />,
     description: "This property is in arctic environment!",
   },
   {
     img: "assets/desert_cat.webp",
-    label: "Desert",
+    label: "Vastrapur",
     icon: <GiCactus />,
     description: "This property is in the desert!",
   },
   {
     img: "assets/barn_cat.jpg",
-    label: "Barns",
+    label: "Prahladnagar",
     icon: <GiBarn />,
     description: "This property is in a barn!",
   },
   {
     img: "assets/lux_cat.jpg",
-    label: "Luxury",
+    label: "Jodhpur Gam",
     icon: <IoDiamond />,
     description: "This property is brand new and luxurious!",
   },
@@ -150,49 +150,30 @@ export const categories = [
 
 export const types = [
   {
-    name: "An entire place",
-    description: "Guests have the whole place to themselves",
-    icon: <FaHouseUser />,
-  },
-  {
-    name: "Room(s)",
+    name: "Personal Rooms",
     description:
-      "Guests have their own room in a house, plus access to shared places",
+    "Guests have their own room in a house, plus access to shared places",
     icon: <BsFillDoorOpenFill />,
   },
   {
-    name: "A Shared Room",
+    name: "2 Sharing Room",
+    description: "A comfortable two-person room with seprate beds and storage area",
+    icon: <FaHouseUser />,
+  },
+  {
+    name: "3 Sharing Room",
     description:
-      "Guests sleep in a room or common area that maybe shared with you or others",
+    "Affordable three person room with seprate beds and storage area",
     icon: <FaPeopleRoof />,
   },
 ];
 
 export const facilities = [
   {
-    name: "Bath tub",
-    icon: <PiBathtubFill />,
-  },
-  {
-    name: "Personal care products",
-    icon: <FaPumpSoap />,
-  },
-  {
-    name: "Outdoor shower",
-    icon: <FaShower />,
-  },
-  {
-    name: "Washer",
+    name: "Washing Machine",
     icon: <BiSolidWasher />,
   },
-  {
-    name: "Dryer",
-    icon: <BiSolidDryer />,
-  },
-  {
-    name: "Hangers",
-    icon: <PiCoatHangerFill />,
-  },
+
   {
     name: "Iron",
     icon: <TbIroning3 />,
@@ -201,16 +182,13 @@ export const facilities = [
     name: "TV",
     icon: <PiTelevisionFill />,
   },
-  {
-    name: "Dedicated workspace",
-    icon: <BsPersonWorkspace />
-  },
+
   {
     name: "Air Conditioning",
     icon: <BsSnow />,
   },
   {
-    name: "Heating",
+    name: "Water Geyser",
     icon: <GiHeatHaze />,
   },
   {
@@ -229,52 +207,15 @@ export const facilities = [
     name: "Wifi",
     icon: <BiWifi />,
   },
-  {
-    name: "Cooking set",
-    icon: <FaKitchenSet />,
-  },
+
   {
     name: "Refrigerator",
     icon: <BiSolidFridge />,
   },
-  {
-    name: "Microwave",
-    icon: <MdMicrowave />,
-  },
-  {
-    name: "Stove",
-    icon: <GiToaster />,
-  },
-  {
-    name: "Barbecue grill",
-    icon: <GiBarbecue />,
-  },
-  {
-    name: "Outdoor dining area",
-    icon: <FaUmbrellaBeach />,
-  },
-  {
-    name: "Private patio or Balcony",
-    icon: <MdBalcony />,
-  },
-  {
-    name: "Camp fire",
-    icon: <GiCampfire />,
-  },
-  {
-    name: "Garden",
-    icon: <MdYard />,
-  },
+
   {
     name: "Free parking",
     icon: <AiFillCar />,
   },
-  {
-    name: "Self check-in",
-    icon: <FaKey />
-  },
-  {
-    name: " Pet allowed",
-    icon: <MdPets />
-  }
+
 ];

@@ -93,7 +93,7 @@ const ListingDetails = () => {
                 toast.success("Booking succesfully!")
                 navigate(`/${customerId}/trips`);
             }
-            else{
+            else {
                 toast.error("Failed to fetch listing details")
 
             }
@@ -112,7 +112,7 @@ const ListingDetails = () => {
             <Navbar />
 
             <div className="listing-details">
-            <Toaster position='top-center' reverseOrder={false} />
+                <Toaster position='top-center' reverseOrder={false} />
                 <div className="title">
                     <h1>{listing.title}</h1>
                     <div></div>
@@ -120,10 +120,11 @@ const ListingDetails = () => {
 
                 <div className="photos">
                     {listing.listingPhotoPaths?.map((item, index) => (
-                        <img key={index}
-                            src={`http://localhost:3000/${item.replace("public", "")}`}
-                            alt={`Listing photo ${index + 1}`}
+                        <img
+                            src={`http://localhost:3000/${photo.replace("public/", "")}`}
+                            alt={`photo ${index + 1}`}
                         />
+
                     ))}
                 </div>
 

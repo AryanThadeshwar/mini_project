@@ -23,6 +23,8 @@ app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/properties', PageListingRoutes);
 app.use('/api/v1/bookings',BookingRoute);
 app.use('/api/v1/users',UserRoute)
+app.use('/uploads', express.static('public/uploads'));
+
 
 const port = 3000 || process.env.PORT;
 

@@ -6,10 +6,6 @@ const PageListingSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
         },
-        category: {
-            type: String,
-            required: true,
-        },
         type: {
             type: String,
             required: true,
@@ -26,16 +22,8 @@ const PageListingSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        province: {
-            type: String,
-            required: true,
-        },
         country: {
             type: String,
-            required: true,
-        },
-        guestCount: {
-            type: Number,
             required: true,
         },
         bedroomCount: {
@@ -60,14 +48,6 @@ const PageListingSchema = new mongoose.Schema(
             required: true
         },
         description: {
-            type: String,
-            required: true
-        },
-        highlight: {
-            type: String,
-            required: true
-        },
-        highlightDesc: {
             type: String,
             required: true
         },
