@@ -1,10 +1,11 @@
 import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
-import beach from './assets/beach.jpg'
-import windmill from './assets/windmill.jpg'
-import iconiccity from './assets/iconiccity.jpg'
-import country from './assets/country.jpg'
-import lakes from './assets/lakes.jpg'
-import island from './assets/island.jpg'
+import beach from './assets/nav.jpg'
+import windmill from './assets/naranpura.webp'
+import iconiccity from './assets/paldi.avif'
+import country from './assets/bodakdev.jpg'
+import lakes from './assets/thaltej.jpg'
+import island from './assets/maninagar.jpg'
+
 import {
   GiBarn,
   GiBoatFishing,

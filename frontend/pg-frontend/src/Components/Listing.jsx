@@ -34,17 +34,17 @@ const Listing = () => {
     useEffect(() => {
         getFeedListings()
     }, [selectedCategory]);
-    console.log(listings); 
+    console.log(listings);
     return (
         <>
             <div className="category-list">
                 {categories?.map((category, index) => (
                     <div
-                        className={`category ${category.label === selectedCategory ? "selected":""}`}
+                        className={`category ${category.label === selectedCategory ? "selected" : ""}`}
                         key={index}
                         onClick={() => setSelectedCategory(category.label)}
                     >
-                        <div className="category_icon">{category.icon}</div>
+                        {/* <div className="category_icon">{category.icon}</div> */}
                         <p>{category.label}</p>
                     </div>
                 ))}
@@ -58,8 +58,10 @@ const Listing = () => {
                                 _id,
                                 creator,
                                 listingPhotoPaths,
+                                streetAddress,
+                                aptSuite,
                                 city,
-                                province,
+                                // province,
                                 country,
                                 category,
                                 type,
@@ -68,8 +70,10 @@ const Listing = () => {
                             }) => (<ListingCard listingId={_id}
                                 creator={creator}
                                 listingPhotoPaths={listingPhotoPaths}
+                                streetAddress={streetAddress}
+                                aptSuite={aptSuite}
                                 city={city}
-                                province={province}
+                                // province={province}
                                 country={country}
                                 category={category}
                                 type={type}

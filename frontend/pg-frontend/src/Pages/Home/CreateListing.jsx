@@ -160,18 +160,6 @@ const CreateListing = () => {
                         </div>
                         <h3>Where's your place located?</h3>
                         <div className="full">
-                            <div className="location">
-                                <p>Street Address</p>
-                                <input
-                                    type="text"
-                                    placeholder="Street Address"
-                                    name="streetAddress"
-                                    value={formLocation.streetAddress}
-                                    onChange={handleChangeLocation}
-                                    required
-                                />
-                            </div>
-                        </div>
                         <div className="half">
                             <div className="location">
                                 <p>Apartment Name</p>
@@ -180,6 +168,18 @@ const CreateListing = () => {
                                     placeholder="Apartment"
                                     name="aptSuite"
                                     value={formLocation.aptSuite}
+                                    onChange={handleChangeLocation}
+                                    required
+                                />
+                            </div>
+                        </div>
+                            <div className="location">
+                                <p>Street Address</p>
+                                <input
+                                    type="text"
+                                    placeholder="Street Address"
+                                    name="streetAddress"
+                                    value={formLocation.streetAddress}
                                     onChange={handleChangeLocation}
                                     required
                                 />
@@ -197,7 +197,6 @@ const CreateListing = () => {
                             />
                         </div>
                         <div className="half">
-
                             <div className="location">
                                 <p>Country</p>
                                 <input

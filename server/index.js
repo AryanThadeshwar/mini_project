@@ -7,7 +7,7 @@ const authRoutes = require('./Routes/authRoutes');
 const PageListingRoutes = require('./Routes/PageListingRoute');
 const BookingRoute = require('./Routes/BookingRoute');
 const UserRoute = require('./Routes/UserRoute');
-
+const paymentRoute = require('./Routes/PaymentRoute');
 
 
 app.use(cors())
@@ -23,17 +23,18 @@ app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/properties', PageListingRoutes);
 app.use('/api/v1/bookings',BookingRoute);
 app.use('/api/v1/users',UserRoute)
+app.use("/api/v1/payments", paymentRoute);
 app.use('/uploads', express.static('public/uploads'));
 
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI);
-        app.listen(port, console.log(`Sever Running at http://localhost:${port}`));
+        app.listen(port, () => console.log(`✅ Server Running at http://localhost:${port}`));
     } catch (error) {
-        console.error("Not connected to database:", error);
+        console.error("❌ Not connected to database:", error);
     }
 }
 

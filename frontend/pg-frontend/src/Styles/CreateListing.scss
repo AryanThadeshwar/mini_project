@@ -144,8 +144,9 @@
     }
 
     .location {
+        width: 500px;
       p {
-        font-weight: 700;
+        font-weight: 1000;
         margin: 20px 0 10px;
       }
       input {
@@ -155,7 +156,6 @@
         font-size: 16px;
         font-weight: 600;
         width: 100%;
-
         &:focus {
           outline: none;
         }

@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 import { MdPayment } from "react-icons/md";
 const Footer = () => {
     return (
-        <div className="footer" style={{background:"#333333",padding:"100px 80px"}}>
+        <div className="footer" style={{background:"#0c2761ff",padding:"100px 80px"}}>
             <div style={styles.logoContainer} className="footer_left">
-                <Link to='/' style={styles.link}> <FaHome style={styles.logo} /> <span style={styles.logoText}>PG</span><span style={styles.logoText2}>Finder</span></Link>
+                <Link to='/' style={styles.link}> <FaHome style={styles.logo} /> <span style={styles.logoText}>PG</span><span style={styles.logoText2}>Wale</span></Link>
             </div>
 
             <div className="footer_center" >

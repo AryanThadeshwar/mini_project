@@ -50,8 +50,6 @@ const Login = () => {
         <Toaster position='top-center' reverseOrder={false} />
         <div className="heading">
           <h1>Login Here</h1>
-          <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique  <br /> facilis rem culpa fugiat eveniet quidem modi vero dicta in quo? <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eos?</h3>
         </div>
         <div className="register-container">
           <form className="register-info" onSubmit={handleSubmit}>

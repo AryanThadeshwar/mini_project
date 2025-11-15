@@ -6,20 +6,22 @@ import ListingCard from "../../Components/ListingCard";
 // import Footer from "../components/Footer"
 
 const WhishList = () => {
-  const WhishList = useSelector((state) => state.user.WhishList);
+  const whishList = useSelector((state) => state.user.whishList);
 
   return (
     <>
       <Navbar />
       <h1 className="title-list">Your Wish List</h1>
       <div className="list">
-        {WhishList?.map(
+        {whishList?.map(
           ({
             _id,
             creator,
             listingPhotoPaths,
+            streetAddress,
+            aptSuite,
             city,
-            province,
+            // province,
             country,
             category,
             type,
@@ -30,8 +32,10 @@ const WhishList = () => {
               listingId={_id}
               creator={creator}
               listingPhotoPaths={listingPhotoPaths}
+              streetAddress={streetAddress}
+              aptSuite={aptSuite}
               city={city}
-              province={province}
+              // province={province}
               country={country}
               category={category}
               type={type}

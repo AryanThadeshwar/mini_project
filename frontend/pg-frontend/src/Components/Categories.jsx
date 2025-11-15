@@ -7,11 +7,11 @@ import React from "react";
 const Categories = () => {
     return (
         <div className="categories">
-            <h1>Explore Top Categories</h1>
+            <h1>Explore Top Areas</h1>
             <p>
-                Explore our wide range of vacation rentals that cater to all types of
-                travelers. Immerse yourself in the local culture, enjoy the comforts of
-                home, and create unforgettable memories in your dream destination.
+                Explore our well-maintained PG accommodations that blend comfort with convenience. 
+                Feel at home with cozy rooms, modern facilities, 
+                and a peaceful atmosphere that supports your daily lifestyle.
             </p>
 
             <div className="categories_list">
@@ -21,7 +21,7 @@ const Categories = () => {
                             <img src={category.img} alt={category.label} />
                             <div className="overlay"></div>
                             <div className="category_text">
-                                <div className="category_text_icon">{category.icon}</div>
+                                {/* <div className="category_text_icon">{category.icon}</div> */}
                                 <p>{category.label}</p>
                             </div>
                         </div>

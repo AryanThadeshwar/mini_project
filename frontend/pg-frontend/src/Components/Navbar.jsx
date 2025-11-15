@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logoContainer}>
-        <Link to='/' style={styles.link}> <FaHome style={styles.logo} /> <span style={styles.logoText}>PG</span><span style={styles.logoText2}>Wale</span></Link>
+        <Link to='/' style={styles.link}> <FaHome style={styles.logo} /> <span style={styles.logoText}>PG</span><span style={styles.logoText2}>WALE</span></Link>
       </div>
       <div style={styles.searchContainer}>
         <input
@@ -33,17 +33,17 @@ const Navbar = () => {
         onClick={()=>navigate(`properties/search/${search}`)}
         />
       </div>
-      <div style={styles.landlordText1}>
+      {/* <div style={styles.landlordText1}>
         {user ?
           (<Link to='/create-listing' style={styles.landlordText}>Become A LandLord</Link>)
           : (<Link to='' style={styles.landlordText}>Become A LandLord</Link>)
         }
-      </div>
+      </div> */}
       <div style={styles.profileContainer}>
         <FaBars style={styles.hamburgerIcon} onClick={handleHamburgerClick} />
         {
           user ?
-            (<img src={`http://localhost:3000/${user.profileImagePath.replace("public", "")}`} style={{ objectFit: "cover", width: "40px", borderRadius: "50%" }} alt="profile" />)
+            (<img src={`http://localhost:3000/${user.profileImagePath.replace("public", "")}`} style={{ objectFit:'cover', width: "40px", height: "40px", borderRadius: "50%" }} alt="profile" />)
             : <FaUser style={styles.profileIcon} />
         }
         {isDropdownOpen && (
@@ -51,7 +51,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <Link style={styles.dropdownItem} to={`/${user._id}/trips`}>
-                  Trip List
+                  My Booking
                 </Link>
                 <Link style={styles.dropdownItem} to={`/${user._id}/wishList`}>
                   Wish List
@@ -59,10 +59,10 @@ const Navbar = () => {
                 <Link style={styles.dropdownItem} to={`/${user._id}/properties`}>
                   Property List
                 </Link>
-                <Link style={styles.dropdownItem} to={`/${user._id}/reservations`}>
+                {/* <Link style={styles.dropdownItem} to={`/${user._id}/reservations`}>
                   Reservation List
-                </Link>
-                <Link to="/" style={styles.dropdownItem}>
+                </Link> */}
+                <Link to="/create-listing" style={styles.dropdownItem}>
                   Become A LandLord
                 </Link>
                 <Link to="/login" style={styles.dropdownItem} onClick={() => dispatch(setLogout())}>
@@ -92,7 +92,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 20px',
-    backgroundColor: '#333',
+    backgroundColor: '#0c2761ff',
     borderRadius: '0',
     boxShadow: "rgba(255, 255, 255) 0px 10px 20px, rgba(255, 255, 255) 0px 6px 6px",
   },
@@ -119,7 +119,7 @@ const styles = {
   searchContainer: {
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: '#555',
+    backgroundColor: '#ffffffff',
     borderRadius: '5px',
     padding: '5px',
     marginRight: "110px"
@@ -128,14 +128,14 @@ const styles = {
     border: 'none',
     outline: 'none',
     backgroundColor: 'transparent',
-    color: '#fff',
+    color: '#030303ff',
     padding: '10px', // Increase padding to increase size
     marginLeft: '5px',
     width: '300px', // Adjust width as needed
     borderRadius: '5px', // Apply border radius
   },
   searchIcon: {
-    color: '#fff',
+    color: '#000000ff',
     marginRight: '10px',
     cursor: 'pointer',
     transition: 'font-size 0.2s ease',
@@ -157,7 +157,6 @@ const styles = {
   profileIcon: {
     color: '#fff',
     marginLeft: '10px',
-
   },
   dropdownContent: {
     position: 'absolute',
@@ -181,7 +180,6 @@ const styles = {
   landlordText1: {
     position: 'absolute',
     right: '8.5vw',
-
   },
   landlordText: {
     color: 'white', textDecoration: 'none',

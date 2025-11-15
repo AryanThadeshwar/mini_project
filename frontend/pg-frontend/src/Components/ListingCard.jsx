@@ -11,7 +11,9 @@ const ListingCard = ({
     creator,
     listingPhotoPaths,
     city,
-    province,
+    streetAddress,
+    aptSuite,
+    // province,
     country,
     category,
     type,
@@ -43,17 +45,17 @@ const ListingCard = ({
     const patchwhishList = async () => {
         if (user?._id !== creator._id) {
             const response = await fetch(
-              `http://localhost:3000/api/v1/users/${user?._id}/${listingId}`,
-              {
-                method: "PATCH",
-                header: {
-                  "Content-Type": "application/json",
-                },
-              }
+                `http://localhost:3000/api/v1/users/${user?._id}/${listingId}`,
+                {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
             );
             const data = await response.json();
             dispatch(setwhishList(data.whishList));
-          } else { return }
+        } else { return }
 
     }
     return (
@@ -69,9 +71,10 @@ const ListingCard = ({
                             listingPhotoPaths?.map((photo, index) => (
                                 <div className="slide" key={index}>
                                     <img
-                                        src={`http://localhost:3000/${photo?.replace("public", "")}`}
+                                        src={`http://localhost:3000/${photo.replace("public/", "")}`} 
                                         alt={`photo ${index + 1}`}
                                     />
+
                                     <div
                                         className="prev-button"
                                         onClick={(e) => {
@@ -98,8 +101,8 @@ const ListingCard = ({
                     </div>
                 </div>
                 <h3>
-    
-                    {city}, {province}, {country}
+
+                {aptSuite}, <br /> {streetAddress}, <br /> {city}, {country}
                 </h3>
                 <p>{category}</p>
                 {
@@ -122,7 +125,7 @@ const ListingCard = ({
                 <button className="favorite" onClick={(e) => {
                     e.stopPropagation();
                     patchwhishList();
-                }} 
+                }}
                 >
                     {isLiked ? (
                         <MdFavorite style={{ color: "red" }} />

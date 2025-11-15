@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const { createListing,
+const {
+    createListing,
     getAllListingProperty,
     getSingleProperty,
-    searchProperty
+    searchProperty,
+    deleteListing
 } = require('../Controllers/PageListingController')
 
 
@@ -24,7 +26,10 @@ const upload = multer({ storage });
 /** User Register **/
 router.post('/create', upload.array("listingPhotos"), createListing);
 router.get('/', getAllListingProperty);
-router.get('/:listingId', getSingleProperty);
 router.get("/search/:search",searchProperty );
+router.delete("/:id",deleteListing);
+router.get('/:listingId', getSingleProperty);
+
+
 
 module.exports = router;

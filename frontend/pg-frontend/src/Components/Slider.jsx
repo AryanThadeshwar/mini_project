@@ -5,8 +5,8 @@ const Slider = () => {
   return (
     <div className="slide">
       <h1>
-        Welcome Home! Anywhere you roam <br /> Stay in the moment. Make your
-        memories
+        Feel at Home Wherever You Go.<br />
+        Explore verified PGs and choose the comfort you deserve.
       </h1>
     </div>
   );

@@ -34,7 +34,7 @@ const PropertyList = () => {
   }, [])
 
 
-  return loading ?<Loader/>: (
+  return loading ? <Loader /> : (
     <>
       <Navbar />
       <h1 className="title-list">Your Property List</h1>
@@ -45,7 +45,9 @@ const PropertyList = () => {
             creator,
             listingPhotoPaths,
             city,
-            province,
+            streetAddress,
+            aptSuite,
+            // province,
             country,
             category,
             type,
@@ -56,8 +58,10 @@ const PropertyList = () => {
               listingId={_id}
               creator={creator}
               listingPhotoPaths={listingPhotoPaths}
+              streetAddress={streetAddress}
+              aptSuite={aptSuite}
               city={city}
-              province={province}
+              // province={province}
               country={country}
               category={category}
               type={type}

@@ -13,19 +13,37 @@ const SearchingPage = () => {
     const { search } = useParams();
     const listings = useSelector((state) => state.listings);
     const dispatch = useDispatch();
+    // const getSearchingProperty = async () => {
+    //     try {
+    //         const response = await fetch(`http://localhost:3000/api/v1/properties/search/${search}`, {
+    //             method: "GET"
+    //         });
+    //         const data = await response.json();
+    //         console.log(data)
+    //         dispatch(setListings({ listings: data }));
+    //         setLoading(false)
+    //     } catch (error) {
+    //         console.log("Unable to fetch data",error.message)
+    //     }
+    // }
+
     const getSearchingProperty = async () => {
-        try {
-            const response = await fetch(`http://localhost:3000/api/v1/properties/search/${search}`, {
-                method: "GET"
-            });
-            const data = await response.json();
-            console.log(data)
-            dispatch(setListings({ listings: data }));
-            setLoading(false)
-        } catch (error) {
-            console.log("Unable to fetch data",error.message)
-        }
+    try {
+        const response = await fetch(
+            `http://localhost:3000/api/v1/properties/search/${search}`,
+            { method: "GET" }
+        );
+
+        const data = await response.json();
+        console.log("Search API Data:", data);
+
+        dispatch(setListings({ listings: data })); // data MUST be array
+        setLoading(false);
+    } catch (error) {
+        console.log("Unable to fetch data", error.message);
     }
+};
+
     useEffect(() => {
         getSearchingProperty()
     }, [search])

@@ -1,11 +1,15 @@
-.register-section-2{
+.register-section-2 {
     background-image: url('../assets/login.jpg');
+    height: 100vh; 
     background-position: center;
-    width: 100%;
-    height: 100vmin;
     background-size: cover;
-    position: relative;
+
+    /* width: 100%; */
+    height: 100vh;   /* Correct full screen height */
+
     display: flex;
-    align-items: center;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: center;   /* center vertically */
+    align-items: center;       /* center horizontally */
+    position: relative;
 }
